@@ -29,8 +29,8 @@ class LogStash::Codecs::Gzip < LogStash::Codecs::Base
   end # def register
 
   def decode(data)
-    @decoder = Zlib::GzipReader.new(StringIO.new(data))
-	raw = @decoder.read
+    decoder = Zlib::GzipReader.new(StringIO.new(data))
+	raw = decoder.read
 
 	yield LogStash::Event.new("message" => raw)
   end # def decode

@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.licenses      = ['Apache License (2.0)']
   s.summary       = 'General purpose gzip codec'
   s.description   = 'General purpose gzip codec for decompressing on input'
-  s.homepage      = 'TODO: Put your plugin''s website or public repo URL here.'
+  s.homepage      = 'https://github.com/dwdii/logstash-codec-gzip'
   s.authors       = ['dwdii']
   s.email         = 'daniel@dittenhafer.net'
   s.require_paths = ['lib']
@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.metadata = { "logstash_plugin" => "true", "logstash_group" => "codec" }
 
   # Gem dependencies
-  s.add_runtime_dependency 'logstash-core-plugin-api', "~> 2.0"
+  s.add_runtime_dependency 'logstash-core-plugin-api', ">= 1.60", "<= 2.99"
   s.add_development_dependency 'logstash-devutils'
 end
